@@ -13,7 +13,26 @@ let INP = "";
 let RO = "";
 
 for (const issue of issues) {
-    if (issue.user.login !== 'xHyroM') continue;
+    if (issue.user.login !== 'xHyroM') {
+        if (issue.state === 'open') {
+            await fetch(`https://api.github.com/repos/xhyrom-forks/bun/issues/${issue.number}`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/vnd.github+json',
+                    'User-Agent': 'xhyrom-forks-bun-global_info',
+                    'Authorization': `token ${process.env.GITHUB_TOKEN}`
+                },
+                body: JSON.stringify({
+                    state: 'closed',
+                    labels: ['invalid'],
+                    title: `[INVALID] ${issue.title}`,
+                })
+            });
+        }
+
+        continue;
+    };
 
     const body = parse(issue.body);
     const content = `- [${body.branch}](https://github.com/xhyrom-forks/bun/tree/${body.branch}) ${body.pr ? `| [#${body.pr}](https://github.com/oven-sh/bun/pull/${body.pr})` : ''}`;
