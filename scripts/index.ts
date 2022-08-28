@@ -16,7 +16,7 @@ for (const issue of issues) {
     if (issue.user.login !== 'xHyroM') continue;
 
     const body = parse(issue.body);
-    const content = `- [${body.branch}](https://github.com/xhyrom-forks/bun/tree/${body.branch}) ${body.pr ? `| [#${body.pr}](https://github.com/oven-sh/bun/pull/${body.pr})` : ''}\n`;
+    const content = `- [${body.branch}](https://github.com/xhyrom-forks/bun/tree/${body.branch}) ${body.pr ? `| [#${body.pr}](https://github.com/oven-sh/bun/pull/${body.pr})` : ''}`;
     const pullRequest = await (await fetch(`https://api.github.com/repos/oven-sh/bun/pulls/${body.pr}`, {
         headers: {
             'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ for (const issue of issues) {
     }
 
     if (issue.state === 'open') {
-        INP += content;
+        INP += `${content}  \n`;
 
         if (issue.locked) continue;
 
@@ -92,7 +92,7 @@ for (const issue of issues) {
             })
         });
     } else {
-        RO += `${content} ${pullRequest.merged_at ? '🎉 landed' : ':( closed'}`;
+        RO += `${content} ${pullRequest.merged_at ? '🎉 landed' : ':( closed'}  \n`;
     }
 }
 
