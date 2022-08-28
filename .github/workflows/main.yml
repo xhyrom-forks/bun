@@ -1,0 +1,24 @@
+name: main
+
+on:
+  issues:
+    types: [opened, closed]
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install bun
+        uses: xhyrom/setup-bun@v0.1.7
+        with:
+          bun-version: latest
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Try bun
+        run: |
+          bun start
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
