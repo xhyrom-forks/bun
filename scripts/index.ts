@@ -2,6 +2,10 @@ import { join } from "path";
 import fetchIssues, { type Issue } from "./utils/fetchIssues";
 import { parse } from "yaml";
 
+type PullRequest = Issue & {
+    merged_at: string | null;
+}
+
 const issues = await fetchIssues();
 const template = await Bun.file(join(import.meta.dir, '..', 'README.template.md')).text();
 
@@ -20,7 +24,7 @@ for (const issue of issues) {
             'User-Agent': 'xhyrom-forks-bun-global_info',
             'Authorization': `token ${process.env.GITHUB_TOKEN}`
         },
-    })).json() as Issue;
+    })).json() as PullRequest;
 
     if (pullRequest.state === 'closed' && issue.state === 'open') {
         // FINISH
@@ -88,7 +92,7 @@ for (const issue of issues) {
             })
         });
     } else {
-        RO += content;
+        RO += `${content} ${pullRequest.merged_at ? '🎉 landed' : ':( closed'}`;
     }
 }
 
