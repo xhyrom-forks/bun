@@ -21,15 +21,32 @@ for (const issue of issues) {
             'Authorization': `token ${process.env.GITHUB_TOKEN}`
         },
     })).json() as Issue;
-    if (pullRequest.state === 'closed') {
+
+    if (pullRequest.state === 'closed' && issue.state === 'open') {
         // FINISH
+        await fetch(`https://api.github.com/repos/xhyrom-forks/bun/issues/${issue.number}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/vnd.github+json',
+                'User-Agent': 'xhyrom-forks-bun-global_info',
+                'Authorization': `token ${process.env.GITHUB_TOKEN}`
+            },
+            body: JSON.stringify({
+                state: 'closed',
+                labels: ['read-only'],
+                title: `[RO] ${body.branch}`,
+            })
+        });
+
+        issue.state = 'closed'
     }
 
     if (issue.state === 'open') {
         INP += content;
 
         if (issue.locked) continue;
-        
+
         await fetch(`https://api.github.com/repos/xhyrom-forks/bun/issues/${issue.number}/comments`, {
             method: 'POST',
             headers: {
@@ -54,6 +71,20 @@ for (const issue of issues) {
             },
             body: JSON.stringify({
                 lock_reason: 'off-topic'
+            })
+        });
+
+        await fetch(`https://api.github.com/repos/xhyrom-forks/bun/issues/${issue.number}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/vnd.github+json',
+                'User-Agent': 'xhyrom-forks-bun-global_info',
+                'Authorization': `token ${process.env.GITHUB_TOKEN}`
+            },
+            body: JSON.stringify({
+                labels: ['in progress'],
+                title: `[INP] ${body.branch}`,
             })
         });
     } else {
