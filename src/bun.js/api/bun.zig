@@ -276,10 +276,8 @@ pub fn getVersions(
 ) js.JSValueRef {
     const object = JSC.JSValue.createEmptyObject(ctx.ptr(), 3);
 
-    const bun_version = ZigString.init(Global.package_json_version).toValue(ctx.ptr());
-    bun_version.put(ctx.ptr(), &ZigString.init("sha"), ZigString.init(Environment.git_sha).toValue(ctx.ptr()));
-
-    object.put(ctx.ptr(), &ZigString.init("bun"), bun_version);
+    object.put(ctx.ptr(), &ZigString.init("bun"), ZigString.init(Global.package_json_version).toValue(ctx.ptr()));
+    object.put(ctx.ptr(), &ZigString.init("bunGitSha"), ZigString.init(Environment.git_sha).toValue(ctx.ptr()));
 
     //object.put(object, &ZigString.init("bunSha"), ZigString.init(Global.package_json_version).toValue(ctx.ptr()));
 
