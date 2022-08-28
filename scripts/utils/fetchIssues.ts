@@ -1,4 +1,4 @@
-interface Issue {
+export interface Issue {
     number: number;
     state: 'open' | 'closed';
     user: {

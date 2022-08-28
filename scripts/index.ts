@@ -1,5 +1,5 @@
 import { join } from "path";
-import fetchIssues from "./utils/fetchIssues";
+import fetchIssues, { type Issue } from "./utils/fetchIssues";
 import { parse } from "yaml";
 
 const issues = await fetchIssues();
@@ -13,6 +13,18 @@ for (const issue of issues) {
 
     const body = parse(issue.body);
     const content = `- [${body.branch}](https://github.com/xhyrom-forks/bun/tree/${body.branch}) ${body.pr ? `| [#${body.pr}](https://github.com/oven-sh/bun/pull/${body.pr})` : ''}\n`;
+    const pullRequest = await (await fetch(`https://api.github.com/repos/oven-sh/bun/pulls/${body.pr}`, {
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/vnd.github+json',
+            'User-Agent': 'xhyrom-forks-bun-global_info',
+            'Authorization': `token ${process.env.GITHUB_TOKEN}`
+        },
+    })).json() as Issue;
+    if (pullRequest.state === 'closed') {
+        // FINISH
+    }
+
     if (issue.state === 'open') {
         RO += content;
     } else {

@@ -3,6 +3,9 @@ name: main
 on:
   issues:
     types: [opened, closed]
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
 
 jobs:
   main:
@@ -17,8 +20,8 @@ jobs:
           bun-version: latest
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Try bun
+      - name: Run script
         run: |
-          bun start
+          bun install && bun start
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
