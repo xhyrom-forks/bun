@@ -4,5 +4,6 @@
 
 
 ## Read only:
+- [xHyroM/fix/error-code-not-found-expected-type](https://github.com/xhyrom-forks/bun/tree/xHyroM/fix/error-code-not-found-expected-type) | [#1120](https://github.com/oven-sh/bun/pull/1120)
 - [xhyrom-forks:xHyroM/feat/show-sha-in-version](https://github.com/xhyrom-forks/bun/tree/xhyrom-forks:xHyroM/feat/show-sha-in-version) | [#1162](https://github.com/oven-sh/bun/pull/1162)
 
