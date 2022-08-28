@@ -28,6 +28,8 @@ for (const issue of issues) {
     if (issue.state === 'open') {
         INP += content;
 
+        if (issue.locked) continue;
+        
         await fetch(`https://api.github.com/repos/xhyrom-forks/bun/issues/${issue.number}/comments`, {
             method: 'POST',
             headers: {
@@ -38,6 +40,20 @@ for (const issue of issues) {
             },
             body: JSON.stringify({
                 body: `Closes after [#${body.pr}](https://github.com/oven-sh/bun/pull/${body.pr})`
+            })
+        });
+
+
+        await fetch(`https://api.github.com/repos/xhyrom-forks/bun/issues/${issue.number}/lock`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/vnd.github+json',
+                'User-Agent': 'xhyrom-forks-bun-global_info',
+                'Authorization': `token ${process.env.GITHUB_TOKEN}`
+            },
+            body: JSON.stringify({
+                lock_reason: 'off-topic'
             })
         });
     } else {

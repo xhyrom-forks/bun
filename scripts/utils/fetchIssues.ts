@@ -6,6 +6,7 @@ export interface Issue {
     }
     body: string;
     title: string;
+    locked: boolean;
 }
 
 export default async(repository: string = 'xhyrom-forks/bun') => {
