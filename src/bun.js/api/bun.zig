@@ -267,6 +267,25 @@ pub fn getOrigin(
     return ZigString.init(VirtualMachine.vm.origin.origin).toValue(ctx.ptr()).asRef();
 }
 
+pub fn getVersions(
+    _: void,
+    ctx: js.JSContextRef,
+    _: js.JSValueRef,
+    _: js.JSStringRef,
+    _: js.ExceptionRef,
+) js.JSValueRef {
+    const object = JSC.JSValue.createEmptyObject(ctx.ptr(), 3);
+
+    const bun_version = ZigString.init(Global.package_json_version).toValue(ctx.ptr());
+    bun_version.put(ctx.ptr(), &ZigString.init("sha"), ZigString.init(Environment.git_sha).toValue(ctx.ptr()));
+
+    object.put(ctx.ptr(), &ZigString.init("bun"), bun_version);
+
+    //object.put(object, &ZigString.init("bunSha"), ZigString.init(Global.package_json_version).toValue(ctx.ptr()));
+
+    return object.asRef();
+}
+
 pub fn getStdin(
     _: void,
     ctx: js.JSContextRef,
@@ -1182,6 +1201,10 @@ pub const Class = NewClass(
         .origin = .{
             .get = getOrigin,
             .ts = d.ts{ .name = "origin", .@"return" = "string" },
+        },
+        .versions = .{
+            .get = getVersions,
+            .ts = d.ts{ .name = "versions", .@"return" = "string" },
         },
         .stdin = .{
             .get = getStdin,
