@@ -26,8 +26,6 @@ for (const issue of issues) {
     }
 
     if (issue.state === 'open') {
-        RO += content;
-    } else {
         INP += content;
 
         await fetch(`https://api.github.com/repos/xhyrom-forks/bun/issues/${issue.number}/comments`, {
@@ -41,7 +39,9 @@ for (const issue of issues) {
             body: JSON.stringify({
                 body: `Closes after [#${body.pr}](https://github.com/oven-sh/bun/pull/${body.pr})`
             })
-        })
+        });
+    } else {
+        RO += content;
     }
 }
 
