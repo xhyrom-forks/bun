@@ -4,4 +4,5 @@
 
 
 ## Read only:
+- [xhyrom-forks:xHyroM/feat/show-sha-in-version](https://github.com/xhyrom-forks/bun/tree/xhyrom-forks:xHyroM/feat/show-sha-in-version) | [#1162](https://github.com/oven-sh/bun/pull/1162)
 
