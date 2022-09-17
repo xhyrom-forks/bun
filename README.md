@@ -1,4 +1,5 @@
 ## In progress:
+- [xHyroM/chore/add-napi-label](https://github.com/xhyrom-forks/bun/tree/xHyroM/chore/add-napi-label) | [#1245](https://github.com/oven-sh/bun/pull/1245)  
 - [xHyroM/feat/cli/implement-bun-dot](https://github.com/xhyrom-forks/bun/tree/xHyroM/feat/cli/implement-bun-dot) | [#1164](https://github.com/oven-sh/bun/pull/1164)  
 
 
