@@ -1,9 +1,9 @@
 ## In progress:
-- [chore/remove-unecessary-unecessary](https://github.com/xhyrom-forks/bun/tree/chore/remove-unecessary-unecessary) | [#1457](https://github.com/oven-sh/bun/pull/1457)  
 - [xHyroM/feat/cli/implement-bun-dot](https://github.com/xhyrom-forks/bun/tree/xHyroM/feat/cli/implement-bun-dot) | [#1164](https://github.com/oven-sh/bun/pull/1164)  
 
 
 ## Read only:
+- [chore/remove-unecessary-unecessary](https://github.com/xhyrom-forks/bun/tree/chore/remove-unecessary-unecessary) | [#1457](https://github.com/oven-sh/bun/pull/1457) 🎉 landed  
 - [xHyroM/chore/add-napi-label](https://github.com/xhyrom-forks/bun/tree/xHyroM/chore/add-napi-label) | [#1245](https://github.com/oven-sh/bun/pull/1245) 🎉 landed  
 - [xHyroM/feat/implement-os](https://github.com/xhyrom-forks/bun/tree/xHyroM/feat/implement-os) | [#1115](https://github.com/oven-sh/bun/pull/1115) 🎉 landed  
 - [xHyroM/fix/error-code-not-found-expected-type](https://github.com/xhyrom-forks/bun/tree/xHyroM/fix/error-code-not-found-expected-type) | [#1120](https://github.com/oven-sh/bun/pull/1120) 🎉 landed  
