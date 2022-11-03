@@ -1,4 +1,5 @@
 ## In progress:
+- [chore/remove-unecessary-unecessary](https://github.com/xhyrom-forks/bun/tree/chore/remove-unecessary-unecessary) | [#1457](https://github.com/oven-sh/bun/pull/1457)  
 - [xHyroM/feat/cli/implement-bun-dot](https://github.com/xhyrom-forks/bun/tree/xHyroM/feat/cli/implement-bun-dot) | [#1164](https://github.com/oven-sh/bun/pull/1164)  
 
 
