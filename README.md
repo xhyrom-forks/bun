@@ -1,4 +1,5 @@
 ## In progress:
+- [xHyroM/docs/add-bun-x-to-bunx](https://github.com/xhyrom-forks/bun/tree/xHyroM/docs/add-bun-x-to-bunx) | [#2574](https://github.com/oven-sh/bun/pull/2574)  
 - [xHyroM/feat/cli/implement-bun-dot](https://github.com/xhyrom-forks/bun/tree/xHyroM/feat/cli/implement-bun-dot) | [#1164](https://github.com/oven-sh/bun/pull/1164)  
 
 
