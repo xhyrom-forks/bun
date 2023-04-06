@@ -1,9 +1,9 @@
 ## In progress:
-- [xHyroM/docs/add-bun-x-to-bunx](https://github.com/xhyrom-forks/bun/tree/xHyroM/docs/add-bun-x-to-bunx) | [#2574](https://github.com/oven-sh/bun/pull/2574)  
 - [xHyroM/feat/cli/implement-bun-dot](https://github.com/xhyrom-forks/bun/tree/xHyroM/feat/cli/implement-bun-dot) | [#1164](https://github.com/oven-sh/bun/pull/1164)  
 
 
 ## Read only:
+- [xHyroM/docs/add-bun-x-to-bunx](https://github.com/xhyrom-forks/bun/tree/xHyroM/docs/add-bun-x-to-bunx) | [#2574](https://github.com/oven-sh/bun/pull/2574) 🎉 landed  
 - [chore/remove-unecessary-unecessary](https://github.com/xhyrom-forks/bun/tree/chore/remove-unecessary-unecessary) | [#1457](https://github.com/oven-sh/bun/pull/1457) 🎉 landed  
 - [xHyroM/chore/add-napi-label](https://github.com/xhyrom-forks/bun/tree/xHyroM/chore/add-napi-label) | [#1245](https://github.com/oven-sh/bun/pull/1245) 🎉 landed  
 - [xHyroM/feat/implement-os](https://github.com/xhyrom-forks/bun/tree/xHyroM/feat/implement-os) | [#1115](https://github.com/oven-sh/bun/pull/1115) 🎉 landed  
