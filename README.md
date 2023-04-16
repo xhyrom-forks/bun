@@ -1,9 +1,9 @@
 ## In progress:
-- [fix/cli/remove-unknown-link-unzip-required](https://github.com/xhyrom-forks/bun/tree/fix/cli/remove-unknown-link-unzip-required) | [#2669](https://github.com/oven-sh/bun/pull/2669)  
 - [xHyroM/feat/cli/implement-bun-dot](https://github.com/xhyrom-forks/bun/tree/xHyroM/feat/cli/implement-bun-dot) | [#1164](https://github.com/oven-sh/bun/pull/1164)  
 
 
 ## Read only:
+- [fix/cli/remove-unknown-link-unzip-required](https://github.com/xhyrom-forks/bun/tree/fix/cli/remove-unknown-link-unzip-required) | [#2669](https://github.com/oven-sh/bun/pull/2669) 🎉 landed  
 - [xHyroM/docs/add-bun-x-to-bunx](https://github.com/xhyrom-forks/bun/tree/xHyroM/docs/add-bun-x-to-bunx) | [#2574](https://github.com/oven-sh/bun/pull/2574) 🎉 landed  
 - [chore/remove-unecessary-unecessary](https://github.com/xhyrom-forks/bun/tree/chore/remove-unecessary-unecessary) | [#1457](https://github.com/oven-sh/bun/pull/1457) 🎉 landed  
 - [xHyroM/chore/add-napi-label](https://github.com/xhyrom-forks/bun/tree/xHyroM/chore/add-napi-label) | [#1245](https://github.com/oven-sh/bun/pull/1245) 🎉 landed  
