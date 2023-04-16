@@ -1,4 +1,5 @@
 ## In progress:
+- [fix/cli/remove-unknown-link-unzip-required](https://github.com/xhyrom-forks/bun/tree/fix/cli/remove-unknown-link-unzip-required) | [#2669](https://github.com/oven-sh/bun/pull/2669)  
 - [xHyroM/feat/cli/implement-bun-dot](https://github.com/xhyrom-forks/bun/tree/xHyroM/feat/cli/implement-bun-dot) | [#1164](https://github.com/oven-sh/bun/pull/1164)  
 
 
