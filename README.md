@@ -1,4 +1,5 @@
 ## In progress:
+- [xHyroM/types/expose-Bun-Env](https://github.com/xhyrom-forks/bun/tree/xHyroM/types/expose-Bun-Env) | [#3111](https://github.com/oven-sh/bun/pull/3111)  
 - [xHyroM/feat/cli/implement-bun-dot](https://github.com/xhyrom-forks/bun/tree/xHyroM/feat/cli/implement-bun-dot) | [#1164](https://github.com/oven-sh/bun/pull/1164)  
 
 
