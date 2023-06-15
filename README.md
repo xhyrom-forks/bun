@@ -1,9 +1,9 @@
 ## In progress:
-- [xHyroM/refactor/use-main-repo-for-upgrades](https://github.com/xhyrom-forks/bun/tree/xHyroM/refactor/use-main-repo-for-upgrades) | [#3155](https://github.com/oven-sh/bun/pull/3155)  
 
 
 ## Read only:
 - [xHyroM/ci/dont-run-builds-in-forks](https://github.com/xhyrom-forks/bun/tree/xHyroM/ci/dont-run-builds-in-forks) | [#3156](https://github.com/oven-sh/bun/pull/3156) 🎉 landed  
+- [xHyroM/refactor/use-main-repo-for-upgrades](https://github.com/xhyrom-forks/bun/tree/xHyroM/refactor/use-main-repo-for-upgrades) | [#3155](https://github.com/oven-sh/bun/pull/3155) :( closed  
 - [xHyroM/refactor/cli/remove-discord-command-from](https://github.com/xhyrom-forks/bun/tree/xHyroM/refactor/cli/remove-discord-command-from) | [#3133](https://github.com/oven-sh/bun/pull/3133) :( closed  
 - [xHyroM/types/expose-Bun-Env](https://github.com/xhyrom-forks/bun/tree/xHyroM/types/expose-Bun-Env) | [#3111](https://github.com/oven-sh/bun/pull/3111) 🎉 landed  
 - [fix/cli/remove-unknown-link-unzip-required](https://github.com/xhyrom-forks/bun/tree/fix/cli/remove-unknown-link-unzip-required) | [#2669](https://github.com/oven-sh/bun/pull/2669) 🎉 landed  
